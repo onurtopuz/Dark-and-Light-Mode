@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" />
+  <body>
+    <h1 id="heading">Light Mode</h1>
+    <div id="container">
+      <div id="toggleBtn"></div>
+    </div>
+    <script>
+      const toggle = document.getElementById("toggleBtn");
+      toggleBtn.addEventListener("click", () => {
+        if (document.getElementsByClassName("dark").length != 0) {
+          document.getElementById("toggleBtn").style.float = "left";
+          document.getElementById("heading").innerHTML = "Light Mode";
+          document.getElementById("heading").style.color = "#000";
+        } else {
+          document.getElementById("toggleBtn").style.float = "right";
+          document.getElementById("heading").innerHTML = "Dark Mode";
+          document.getElementById("heading").style.color = "#fff";
+        }
+        document.body.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>
